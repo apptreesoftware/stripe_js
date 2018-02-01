@@ -1,13 +1,14 @@
 name: stripe_js
-description: A starting point for Dart libraries or applications.
+description: Experimental package:js bindings for Stripe
 version: 0.0.1
-#homepage: https://www.example.com
-#author: john <email@example.com>
+homepage: https://github.com/apptreesoftware/stripe_js
+author: John Ryan <john.p.ryan4@gmail.com>
 
 environment:
   sdk: '>=1.20.1 <2.0.0'
 
 dependencies:
+  js: ^0.6.1
   func: ^1.0.0
 
 dev_dependencies:
