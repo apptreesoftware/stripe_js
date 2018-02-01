@@ -4,4 +4,5 @@
 
 ```
 dart_js_facade_gen lib/src/stripe.d.ts > lib/stripe_js.dart
+dart_js_facade_gen lib/src/promise.d.ts > lib/src/promise.dart
 ```

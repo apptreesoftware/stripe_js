@@ -2,6 +2,8 @@
 library lib.src.stripe;
 
 import "package:js/js.dart";
+import 'package:stripe_js/src/promise.dart';
+export 'src/promise.dart';
 
 /// Type definitions for stripe-v3 3.0
 /// Project: https://stripe.com/
@@ -30,9 +32,9 @@ abstract class StripeStatic {
 @JS()
 abstract class stripe_Stripe {
   external Elements elements([ElementsCreateOptions options]);
-  external dynamic<TokenResponse> createToken(Element element,
+  external PromiseType<TokenResponse> createToken(Element element,
       [TokenOptions options]);
-  external dynamic<SourceResponse> createSource(SourceOptions options);
+  external PromiseType<TokenResponse> createSource(SourceOptions options);
 }
 
 @anonymous
