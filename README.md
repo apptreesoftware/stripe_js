@@ -1,5 +1,7 @@
 # stripe_js
 
+Experimental package:js bindings for Stripe
+
 ## Example
 
 ```html
