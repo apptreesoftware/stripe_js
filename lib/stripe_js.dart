@@ -2,8 +2,8 @@
 library lib.src.stripe;
 
 import "package:js/js.dart";
-import 'package:stripe_js/src/promise.dart';
-export 'src/promise.dart';
+import "package:func/func.dart";
+import "src/promise.dart";
 
 /// Type definitions for stripe-v3 3.0
 /// Project: https://stripe.com/
@@ -15,18 +15,9 @@ export 'src/promise.dart';
 /// Kamil Gałuszka <https://github.com/galuszkak>
 /// Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 @JS()
-external StripeStatic get Stripe;
+external Func1<String, stripe_Stripe> get Stripe;
 @JS()
-external set Stripe(StripeStatic v);
-
-// Module stripe
-@anonymous
-@JS()
-abstract class StripeStatic {
-  external stripe_Stripe call(String publicKey);
-  external num get version;
-  external set version(num v);
-}
+external set Stripe(Func1<String, stripe_Stripe> v);
 
 @anonymous
 @JS()
@@ -36,6 +27,7 @@ abstract class stripe_Stripe {
       [TokenOptions options]);
   external PromiseType<TokenResponse> createSource(SourceOptions options);
 }
+
 
 @anonymous
 @JS()
@@ -525,8 +517,8 @@ abstract class ElementOptions {
   external factory ElementOptions({List<Font> fonts, String locale});
 }
 
-/*type elementsType =
-    'card' | 'cardNumber' | 'cardExpiry' | 'cardCvc' | 'postalCode';*/
+///*type elementsType =
+//    'card' | 'cardNumber' | 'cardExpiry' | 'cardCvc' | 'postalCode';*/
 @anonymous
 @JS()
 abstract class Elements {
