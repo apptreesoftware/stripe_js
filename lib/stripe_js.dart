@@ -2,7 +2,6 @@
 library lib.src.stripe;
 
 import "package:js/js.dart";
-import "package:func/func.dart";
 import "src/promise.dart";
 
 /// Type definitions for stripe-v3 3.0
@@ -14,6 +13,9 @@ import "src/promise.dart";
 /// Justin Leider <https://github.com/jleider>
 /// Kamil Gałuszka <https://github.com/galuszkak>
 /// Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
+
+typedef R Func1<A, R>(A a);
+
 @JS()
 external Func1<String, stripe_Stripe> get Stripe;
 @JS()
@@ -27,7 +29,6 @@ abstract class stripe_Stripe {
       [TokenOptions options]);
   external PromiseType<TokenResponse> createSource(SourceOptions options);
 }
-
 
 @anonymous
 @JS()
@@ -80,10 +81,11 @@ abstract class SourceOptions {
         }*/
       get sepa_debit;
   external set sepa_debit(
-      dynamic /*{
+      dynamic
+          /*{
             iban: string;
         }*/
-      v);
+          v);
   external String get currency;
   external set currency(String v);
   external num get amount;
@@ -104,7 +106,8 @@ abstract class SourceOptions {
         }*/
       get owner;
   external set owner(
-      dynamic /*{
+      dynamic
+          /*{
             address?: {
                 city?: string;
                 country?: string;
@@ -117,7 +120,7 @@ abstract class SourceOptions {
             email?: string;
             phone?: string;
         }*/
-      v);
+          v);
   external dynamic /*{}*/ get metadata;
   external set metadata(dynamic /*{}*/ v);
   external String get statement_descriptor;
@@ -127,10 +130,11 @@ abstract class SourceOptions {
         }*/
       get redirect;
   external set redirect(
-      dynamic /*{
+      dynamic
+          /*{
             return_url: string;
         }*/
-      v);
+          v);
   external String get token;
   external set token(String v);
   external String /*'reusable'|'single_use'*/ get usage;
@@ -138,13 +142,15 @@ abstract class SourceOptions {
   external factory SourceOptions(
       {String type,
       String /*'redirect'|'receiver'|'code_verification'|'none'*/ flow,
-      dynamic /*{
+      dynamic
+          /*{
             iban: string;
         }*/
-      sepa_debit,
+          sepa_debit,
       String currency,
       num amount,
-      dynamic /*{
+      dynamic
+          /*{
             address?: {
                 city?: string;
                 country?: string;
@@ -157,13 +163,14 @@ abstract class SourceOptions {
             email?: string;
             phone?: string;
         }*/
-      owner,
+          owner,
       dynamic /*{}*/ metadata,
       String statement_descriptor,
-      dynamic /*{
+      dynamic
+          /*{
             return_url: string;
         }*/
-      redirect,
+          redirect,
       String token,
       String /*'reusable'|'single_use'*/ usage});
 }
@@ -235,7 +242,8 @@ abstract class Source {
         }*/
       get owner;
   external set owner(
-      dynamic /*{
+      dynamic
+          /*{
             address: string | null;
             email: string | null;
             name: string | null;
@@ -245,7 +253,7 @@ abstract class Source {
             verified_name: string | null;
             verified_phone: string | null;
         }*/
-      v);
+          v);
   external dynamic
       /*{
             bank_code: string | null;
@@ -256,20 +264,22 @@ abstract class Source {
         }*/
       get sepa_debit;
   external set sepa_debit(
-      dynamic /*{
+      dynamic
+          /*{
             bank_code: string | null;
             country: string | null;
             fingerprint: string;
             last4: string;
             mandate_reference: string;
         }*/
-      v);
+          v);
   external factory Source(
       {String client_secret,
       num created,
       String currency,
       String id,
-      dynamic /*{
+      dynamic
+          /*{
             address: string | null;
             email: string | null;
             name: string | null;
@@ -279,15 +289,16 @@ abstract class Source {
             verified_name: string | null;
             verified_phone: string | null;
         }*/
-      owner,
-      dynamic /*{
+          owner,
+      dynamic
+          /*{
             bank_code: string | null;
             country: string | null;
             fingerprint: string;
             last4: string;
             mandate_reference: string;
         }*/
-      sepa_debit});
+          sepa_debit});
 }
 
 @anonymous
@@ -468,7 +479,8 @@ abstract class ElementsCreateOptions {
 }
 
 typedef void handler(
-    [ElementChangeResponse response]); /*type eventTypes = 'blur' | 'change' | 'focus' | 'ready';*/
+    [ElementChangeResponse
+        response]); /*type eventTypes = 'blur' | 'change' | 'focus' | 'ready';*/
 
 @anonymous
 @JS()
@@ -541,7 +553,8 @@ abstract class ElementsOptions {
             }*/
       get classes;
   external set classes(
-      dynamic /*{
+      dynamic
+          /*{
                 base?: string;
                 complete?: string;
                 empty?: string;
@@ -549,7 +562,7 @@ abstract class ElementsOptions {
                 invalid?: string;
                 webkitAutofill?: string;
             }*/
-      v);
+          v);
   external bool get hidePostalCode;
   external set hidePostalCode(bool v);
   external bool get hideIcon;
@@ -565,17 +578,19 @@ abstract class ElementsOptions {
             }*/
       get style;
   external set style(
-      dynamic /*{
+      dynamic
+          /*{
                 base?: Style;
                 complete?: Style;
                 empty?: Style;
                 invalid?: Style;
             }*/
-      v);
+          v);
   external dynamic /*String|JSMap of <String,String>*/ get value;
   external set value(dynamic /*String|JSMap of <String,String>*/ v);
   external factory ElementsOptions(
-      {dynamic /*{
+      {dynamic
+          /*{
                 base?: string;
                 complete?: string;
                 empty?: string;
@@ -583,17 +598,18 @@ abstract class ElementsOptions {
                 invalid?: string;
                 webkitAutofill?: string;
             }*/
-      classes,
+          classes,
       bool hidePostalCode,
       bool hideIcon,
       String /*'solid'|'default'*/ iconStyle,
-      dynamic /*{
+      dynamic
+          /*{
                 base?: Style;
                 complete?: Style;
                 empty?: Style;
                 invalid?: Style;
             }*/
-      style,
+          style,
       dynamic /*String|JSMap of <String,String>*/ value});
 }
 
