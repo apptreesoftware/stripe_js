@@ -1,16 +1,14 @@
 name: stripe_js
 description: Experimental package:js bindings for Stripe
-version: 1.0.0
+version: 2.0.0
 homepage: https://github.com/apptreesoftware/stripe_js
 author: John Ryan <john.p.ryan4@gmail.com>
 
 environment:
-  sdk: '>=1.20.1 <2.0.0'
+  sdk: '>=1.20.1 <3.0.0'
 
 dependencies:
   js: ^0.6.1
-  func: ">=0.1.0 < 1.0.0"
 
 dev_dependencies:
-  browser: any
-  test: ^0.12.0
+  test: ^1.0.0
